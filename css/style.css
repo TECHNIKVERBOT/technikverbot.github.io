@@ -1,0 +1,9 @@
+/*  css = cascading style sheet
+h1,h2,... sind Elementselektoren
+.bereich1 ist eine Klassendefinition, darf mehrfach verwendet werden. 
+#wichtigerText ist ein ID-Selektor, diese darf der seite nur EINMAL verwendet werden.
+ */
+
+ .header {border-color: black; 
+        border: double
+        }
