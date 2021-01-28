@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <title>8570W Hackintosh-Geschichte</title>
+    </head>
+    <body>
+        <div class="header"><h1><center>Die Geschichte hinter dem Elitebook 8570W-Hackintosh</center></h1></div>
+        <p>Hier erzähle ich mal eine kleine Geschichte darüber, wie wir (Ich, <a href="https://github.com/SkyrilHD" style="color: darkgrey">@SkyrilHD</a>, <a href="https://github.com/HansHubertHass" style="color: darkgrey">@HansHubertHass</a>) überhaupt dazu gekommen sind, 
+        den Elitebook von <a href="https://github.com/HansHubertHass" style="color: darkgrey">@HansHubertHass</a> zu hackintoshen, 
+        wie sich die Dinge entwickelt haben und wie es aktuell mit der EFI-Konfiguration steht.</p>
+            <h2>Geschichte hinter der EFI</h2>
+            <p>Irgendwann Anfang letzten Jahres: Ich war in meiner Telegram-Gruppe mit meinen Mitgliedern quatschen.
+                Zum Zeitpunkt hatte @HansHubertHass noch ein 15 Zoll MacBook Pro aus Baujahr 2009 ohne (!) Display. 
+                Wir alle hatten mal darüber gequatscht, wie ein aktuelleres MacBook doch recht nett wäre.
+                Da kam ich auf die grandiose Idee, dass wir einfach sein Elitebook hackintoshen, 
+                welches von den Specs ja etwa dem eines Non-Retina MacBook Pro 2012 entspricht. 
+                Es hat damit angefangen, dass wir vorgefertigte EFI-Konfigs in einem chinesischen Blog fanden und wir sie einsetzen wollten. 
+                Jedoch war es aufgrund der beschissenen Hosting-Seite nicht möglich, irgendeine Konfig zu ziehen, egal wie sehr wir uns da versucht haben. 
+                Dann kam @SkyrilHD auf die Idee, dass wir uns eine Konfig einfach selber bauen, was wir am Ende auch getan haben. 
+                Zuerst haben wir Clover ausprobiert, was aber nicht funktionierte. Danach haben wir OpenCore eingesetzt, was auf einem Schlag bootete. 
+                Am 31.05.2020 war es dann auch soweit: macOS Catalina hat endlich <a href="https://twitter.com/MacGen2/status/1266880456743620608?s=20" style="color: darkgrey">gebootet</a>.
+                Die EFI war jedoch in 'nem wirklichen frühen Entwicklungsstadium:
+                <br> 
+                <ul>
+                    <li>WLAN, Sleep, TrackPoint, Bluetooth, Akkuanzeige und Power-Management funktionierten nicht </li>
+                    <li>Sound war schrecklich wegen VoodooHDA</li>
+                    <li>AppleALC verhinderte OS-Boot</li>
+                    <li>TrackPad wurde nur als Maus erkannt</li>
+                    <li>Helligkeitskontrolle funktionierte aufgrund der GPU nicht</li>
+                    <li>Display als Monitor erkannt</li>
+                </ul>
+                An der Helligkeitskontrolle haben wir uns denke ich am Längsten versucht, bis wir am Ende aufgegeben haben, 
+                da die GPU dafür sorgt, dass das Display nicht als internes eingestuft wird. 
+                Akkuanzeige erweist sich Stand Heute immernoch als Problem, da die HP Embedded Controller Patches unter 
+                OpenCore wohl nicht funktionieren wollen. Denn als wir testweise eine Clover-Config aus einem TonymacX86-Forum genommen haben, 
+                war die Akkuanzeige tatsächlich zu sehen.
+                <br>
+                Stand Heute haben wir gelöst:
+                <ul>
+                    <li>Sleep an sich funktioniert, jedoch nicht beim Zuklappen (wegen dem erwähnten Display-Problem)</li>
+                    <li>AppleALC kann wieder verwendet werden, Sound ist somit viel besser</li>
+                    <li>Für WLAN/Bluetooth wurde zwar die Intel-Karte durch eine Broadcom ersetzt, mittlerweile jedoch auch über itlwm realisierbar.</li>
+                </ul>
+                Irgendwann Ende Dezember wurde das Projekt auf Eis gelegt, 
+                da macOS für @HansHubertHass weniger wichtig wurde und es durch Windows ersetzte, wenige Monate, 
+                nachdem er sein MacBook repariert hat und es gegen ein 17 Zöller aus dem selben Baujahr eintauschte. 
+                Erst kürzlich vor 'ner Woche schlug ich spaßeshalber vor, die Arbeit an der Hackintosh-EFI wieder fortzusetzen, 
+                aber dafür mit macOS auf einer externen Festplatte, um die Windows-Installation auf der SSD unberührt zu lassen, 
+                wo er sich tatsächlich daraufhin bereiterklärte. Am vorgestrigen Tag, dem 26.01.2021, bestellte er sich ein externes Festplattengehäuse, 
+                welches morgen ankommen soll und uns nun ermöglicht, das Projekt am Morgen, dem 29.02., offiziell wieder fortzusetzen! :D
+                <br>
+                Wir werden mit OpenCore 0.6.6, was am 1. Februar veröffentlicht werden soll, einen Neustart wagen und die EFI komplett von neu bauen.
+                <br>
+                <br>
+                Was wir aktuell hoffen, gelöst zu bekommen:
+                <ul>
+                    <li>TouchPad als wirkliches TouchPad via VoodooRMI, hoffentlich auch TrackPoint</li>
+                    <li>Power-Management sollte leicht sein</li>
+                    <li>Akkuanzeige ist das allerwichtigste zurzeit bei dem Projekt</li>
+                </ul>
+            Das war die Geschichte hinter dem 8570W-Hackintosh-Projekt. Folgt der <a href="https://github.com/SkyrilHD/HP-8570W-Hackintosh" style="color: darkgrey">Repository von @SkyrilHD</a> für weitere Updates zu der EFI-Konfiguration.
+            </p>
+            <a href="../index.html" style="color: darkgrey">Zur Hauptseite</a>
+            <br>
+            <br>
+            <b><i>Dieser Artikel wurde am 28.01.2021 verfasst.</i></b>
+    </body>
+</html>

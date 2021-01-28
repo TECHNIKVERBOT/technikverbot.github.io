@@ -9,6 +9,69 @@ body {
        color: whitesmoke
        }
 
- .header {
+.header {
        border: double; 
        }
+
+.rechts {
+	text-align: right
+}
+
+.zentriert {
+      text-align: center
+}
+
+table.tab4 {
+	width: 700px;
+	border: #C0C0C0 1px solid;
+	border-collapse: separate;
+	margin: 10px 0;
+}
+
+table.tab4 td, table.tab4 th {
+	border: #C0C0C0 1px solid;
+	padding: 3px;
+}
+
+table.tab4 th {
+	color: black;
+	background-color: #C0C0C0;
+}
+
+/* Formatierung von Links --> Pseudoklassen
+Reihenfolge der Pseudoklassen so wie angegeben unbedingt einhalten !!! 
+a:link = Verweis auf noch nicht besuchte Seite
+a:visited = bereits besuchte Seiten (lt. BrowserHistorie)
+a:focus = Element mit focus bei Tastaturbedienung (auch andere Elemente ausser a)
+a:hover = Element mit mouseover (auch andere Elemente ausser a)
+a:active = für gerade angeklickte Elemente, solange geklickt wird (auch andere Elemente ausser a)
+*/
+
+nav a:link {
+      display: block;
+      background-color: #808080;
+      color: black;
+      margin-bottom: 1px;
+      padding: 3px 10px;
+      text-decoration: none;
+}
+
+nav a:visited {
+     color: black;
+}
+
+nav a:focus {
+     color: red;
+}
+
+nav a:hover {
+     background-color: #003399;
+     color: white;
+}
+
+nav a:active {
+     color: green;
+}
+
+
+/* Seiteninhalt ------------------------------------------- */
