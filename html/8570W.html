@@ -47,27 +47,31 @@
                 <img src="../img/Catalina.jpg" style="height: 240px; width: 320px; float: bottom;"><br> 
                 macOS Catalina hat endlich <a href="https://twitter.com/MacGen2/status/1266880456743620608?s=20" style="color: darkgrey">gebootet</a>.
                 Die EFI war jedoch in 'nem wirklich frühen Entwicklungsstadium:
-                <br> 
-                <ul>
-                    <li>WLAN, Sleep, TrackPoint, Bluetooth, Akkuanzeige und Power-Management funktionierten nicht </li>
-                    <li>Sound war schrecklich wegen VoodooHDA</li>
-                    <li>AppleALC verhinderte OS-Boot</li>
-                    <li>TrackPad wurde nur als Maus erkannt</li>
-                    <li>Helligkeitskontrolle funktionierte aufgrund der GPU nicht</li>
-                    <li>Display als Monitor erkannt</li>
-                </ul>
+                <br>
+                - WLAN, Sleep, TrackPoint, Bluetooth, Akkuanzeige und Power-Management funktionierten nicht
+                - Sound war schrecklich wegen VoodooHDA
+                - AppleALC verhinderte OS-Boot
+                - TrackPad wurde nur als Maus erkannt
+                - Helligkeitskontrolle funktionierte aufgrund der GPU nicht
+                - Display als Monitor erkannt
+                <br>
                 An der Helligkeitskontrolle haben wir uns denke ich am Längsten versucht, bis wir am Ende aufgegeben haben, 
                 da die GPU dafür sorgt, dass das Display nicht als internes eingestuft wird. 
                 Akkuanzeige erweist sich Stand Heute immernoch als Problem, da die HP Embedded Controller Patches unter 
                 OpenCore wohl nicht funktionieren wollen. Denn als wir testweise eine Clover-Config aus einem TonymacX86-Forum genommen haben, 
                 war die Akkuanzeige tatsächlich zu sehen.
                 <br>
+                <br>
                 Stand Heute haben wir gelöst:
-                <ul>
-                    <li>Sleep an sich funktioniert, jedoch nicht beim Zuklappen (wegen dem erwähnten Display-Problem)</li>
-                    <li>AppleALC kann wieder verwendet werden, Sound ist somit viel besser</li>
-                    <li>Für WLAN/Bluetooth wurde zwar die Intel-Karte durch eine Broadcom ersetzt, mittlerweile jedoch auch über itlwm realisierbar.</li>
-                </ul>
+                <br>
+                <br>
+                <a>- Sleep an sich funktioniert, jedoch nicht beim Zuklappen (wegen dem erwähnten Display-Problem)</a>
+                <br>
+                <a>- AppleALC kann wieder verwendet werden, Sound ist somit viel besser</a>
+                <br>
+                <a>- Für WLAN/Bluetooth wurde zwar die Intel-Karte durch eine Broadcom ersetzt, mittlerweile jedoch auch über itlwm realisierbar.</a>
+                <br>
+                <br>
                 Irgendwann Ende Dezember wurde das Projekt auf Eis gelegt, 
                 da macOS für @HansHubertHass unwichtiger wurde und es durch Windows ersetzte, wenige Monate, 
                 nachdem er sein MacBook repariert hat und es gegen ein 17 Zöller aus dem selben Baujahr eintauschte. 
@@ -76,17 +80,21 @@
                 wo er sich tatsächlich daraufhin bereiterklärte. Am 26.01.2021 bestellte er sich ein externes Festplattengehäuse, 
                 was uns ermöglicht, das Projekt seit dem 01.02. offiziell wieder fortzusetzen! :D
                 <br>
-                Wir werden mit OpenCore 0.6.6, was am 1. Februar veröffentlicht werden soll, einen Neustart wagen und die EFI komplett von neu bauen.
+                Wir wagen aktuell mit OpenCore 0.6.6 einen kompletten Neuversuch.
                 <br>
                 <br>
                 Was wir hoffen, gelöst zu bekommen:
-                <ul>
-                    <li>TouchPad als wirkliches TouchPad via VoodooRMI, hoffentlich auch TrackPoint</li>
-                    <li>Power-Management sollte leicht sein</li>
-                    <li>Akkuanzeige ist das allerwichtigste zurzeit bei dem Projekt</li>
-                </ul>
+                <br>
+                <br>
+                <a>- TouchPad als wirkliches TouchPad via VoodooRMI, hoffentlich auch TrackPoint</a>
+                <br>
+                <a>- Power-Management sollte leicht sein</a>
+                <br>
+                <a>- Akkuanzeige ist das allerwichtigste zurzeit bei dem Projekt</a>
+                <br>
+                <br>
             Das war die Geschichte hinter dem 8570W-Hackintosh-Projekt. Folgt der <a href="https://github.com/SkyrilHD/HP-8570W-Hackintosh" style="color: darkgrey">Repository von @SkyrilHD</a> für weitere Updates zu der EFI-Konfiguration.
             </p>
-            <b><i>Dieser Artikel wurde am 28.01.2021 verfasst. Zuletzt bearbeitet am 03.02.</i></b>
+            <b><i>Dieser Artikel wurde am 28.01.2021 verfasst. Zuletzt bearbeitet am 04.02.</i></b>
     </body>
 </html>
