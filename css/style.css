@@ -6,7 +6,11 @@ h1,h2,... sind Elementselektoren
 body {
        background-color: #36393f;
        font-family: Arial;
-       color: whitesmoke
+       color: whitesmoke;
+       background:linear-gradient(0deg, rgba(230, 0, 18, 0.3), rgba(230, 0, 18, 0.3)), url(../img/animated.gif);
+       background-size: 100%;
+       background-repeat: repeat-y;
+       background-attachment: fixed;
        }
 
 .header {
