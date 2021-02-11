@@ -40,8 +40,9 @@
                 welches von den Specs ja etwa dem eines Non-Retina MacBook Pro 2012 entspricht. 
                 Es hat damit angefangen, dass wir vorgefertigte EFI-Konfigs in einem chinesischen Blog fanden und wir sie einsetzen wollten. 
                 Jedoch war es aufgrund der beschissenen Hosting-Seite nicht möglich, irgendeine Konfig zu ziehen, egal wie sehr wir uns da versucht haben. 
-                Dann kamen @SkyrilHD und ich auf die Idee, dass wir uns eine Konfig einfach selber bauen, was wir am Ende auch getan haben. 
+                Irgendwann wurde es so frustrierend, dass @SkyrilHD und ich auf die Idee kamen, dass wir uns eine Konfig einfach selber bauen, was wir am Ende auch getan haben. 
                 Zuerst haben wir Clover ausprobiert, was aber nicht funktionierte. Danach haben wir OpenCore eingesetzt, was auf einem Schlag bootete. 
+                <br>
                 Am 31.05.2020 war es dann auch soweit: 
                 <br>
                 <img src="../img/Catalina.jpg" style="height: 240px; width: 320px; float: bottom;"><br> 
@@ -100,8 +101,31 @@
                 <a>- Akkuanzeige ist das allerwichtigste zurzeit bei dem Projekt</a>
                 <br>
                 <br>
+                <b>UPDATE (11.02.2021):</b>
+                <a>Es gibt deutliche Fortschritte bei der EFI.</a>
+                <br>
+                <a>Es stellt sich heraus, dass das TouchPad eigentlich immer richtig funktioniert hat, 
+                  <br>
+                  NUR zeigt macOS lediglich die Einstellungen dafür nicht an, wenn die Akkuanzeige nicht funktioniert.
+                  <br>
+                  <br>
+                  </a>
+                Änderungen im Vergleich zur alten EFI (Stand 11.02.2021):
+                <br>
+                <br>
+                <a>- TouchPad hat nun dank VoodooRMI und SMBUS-Anbindung volle Magic TrackPad 2 Emulation</a>
+                <br>
+                <a>- EFI ist deutlich strukturierter und sauber, ohne experimentellen Kram</a>
+                <br>
+                <a>- alle Kexts geupdated</a>
+                <br>
+                <a>- unnötige Kexts entfernt</a>
+                <br>
+                <a>- Wechsel zu OpenHfsPlus</a>
+                <br>
+                <br>
             Das war die Geschichte hinter dem 8570W-Hackintosh-Projekt. Folgt der <a href="https://github.com/SkyrilHD/HP-8570W-Hackintosh" style="color: darkgrey">Repository von @SkyrilHD</a> für weitere Updates zu der EFI-Konfiguration.
             </p>
-            <b><i>Dieser Artikel wurde am 28.01.2021 verfasst. Zuletzt bearbeitet am 04.02.</i></b>
+            <b><i>Dieser Artikel wurde am 28.01.2021 verfasst. Zuletzt bearbeitet am 11.02.2021</i></b>
     </body>
 </html>
