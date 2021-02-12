@@ -1,2 +1,2 @@
 # technikverbot.github.io
-Meine GitHub-Seite
+Meine GitHub-Seite (Teil meiner Arbeit)
