@@ -1,0 +1,8 @@
+body {
+    background-image: url("../img/background.jpg");
+    -webkit-background-size:cover;
+}
+
+h1 {
+    color: white;
+}
