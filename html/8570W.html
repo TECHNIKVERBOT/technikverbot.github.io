@@ -86,46 +86,49 @@
                 Irgendwann später schlug ich spaßeshalber vor, die Arbeit an der Hackintosh-EFI wieder fortzusetzen, 
                 aber dafür mit macOS auf einer externen Festplatte, um die Windows-Installation auf der SSD unberührt zu lassen, 
                 wo er sich tatsächlich daraufhin bereiterklärte. Am 26.01.2021 bestellte er sich ein externes Festplattengehäuse, 
-                was uns ermöglicht, das Projekt seit dem 01.02. offiziell wieder fortzusetzen! :D
+                was uns ermöglichte, das Projekt seit dem 01.02. offiziell wieder fortzusetzen! :D
                 <br>
-                Wir wagen aktuell mit OpenCore 0.6.6 einen kompletten Neuversuch.
-                <br>
-                <br>
-                Was wir hoffen, gelöst zu bekommen:
+                Wir wagten mit OpenCore 0.6.6 einen kompletten Neuversuch machten seitdem mehrere Fortschritte:
                 <br>
                 <br>
-                <a>- TouchPad als wirkliches TouchPad via VoodooRMI, hoffentlich auch TrackPoint</a>
+                - TouchPad hat jetzt auch Magic TrackPad 2 Emulation dank VoodooRMI
                 <br>
-                <a>- Power-Management sollte leicht sein</a>
-                <br>
-                <a>- Akkuanzeige ist das allerwichtigste zurzeit bei dem Projekt</a>
+                - deutlich sauberes EFI-Konstrukt ohne experimentellen Kram
                 <br>
                 <br>
-                <b>UPDATE (11.02.2021):</b>
-                <a>Es gibt deutliche Fortschritte bei der EFI.</a>
+                Jedoch machte uns ein Problem immer ein Strich durch die Rechnung: Der Akku.
                 <br>
-                <a>Es stellt sich heraus, dass das TouchPad eigentlich immer richtig funktioniert hat, 
-                  <br>
-                  NUR zeigt macOS lediglich die Einstellungen dafür nicht an, wenn die Akkuanzeige nicht funktioniert.
-                  <br>
-                  <br>
-                  </a>
-                Änderungen im Vergleich zur alten EFI (Stand 11.02.2021):
+                Genauer gesagt weigerte sich das Gerät, den Akkuanzeige auszulesen. Seit Mai 2020 hatten wir darauf gewartet, dass wir es hinbekommen würden.
+                <br>
+                Erst ging es damit los, dass wir es hingekriegt haben, mit einer Clover-EFI aus einem Tonymacx86-Forum den Akkustatus anzuzeigen.
+                <br>
+                Dann haben wir uns dementsprechend so die Unterschiede angesehen, konnten am Anfang jedoch nichts finden. Das war auch der Zeitpunkt, wo das Projekt dann auch 'ne Zeit lang abgebrochen wurde.
                 <br>
                 <br>
-                <a>- TouchPad hat nun dank VoodooRMI und SMBUS-Anbindung volle Magic TrackPad 2 Emulation</a>
+                Alles änderte sich, als <a href="https://github.com/Bautheile" style="color: darkgrey">@Bautheile</a> als zweiter dedizierter Tester dazugestoßen kam. Durch die große Zeitspanne zwischen den BIOS-Versionen waren bei den beiden DSDTs einige Unterschiede zu erkennen, die später auch noch etwas beigetragen hatten.
                 <br>
-                <a>- EFI ist deutlich strukturierter und sauber, ohne experimentellen Kram</a>
+                Irgendwann schafften wir es doch mit der DSDT von der Clover-EFI, dass der Akku ENDLICH unter beiden BIOS-Versionen (F.31 und F.61) unter OpenCore erkannt wurde.
                 <br>
-                <a>- alle Kexts geupdated</a>
+                Jedoch ist eine DSDT nicht zu empfehlen, da hierdurch die gesamte ACPI-Tabelle des Laptops geändert wird, was nicht nur zu ewig langen Bootzeiten, sondern auch zu Instabilität führen kann.
                 <br>
-                <a>- unnötige Kexts entfernt</a>
+                Hotpatching via SSDT ist in dem Fall die deutlich bessere Variante. Was wir am Ende auch nach vielen Versuchen und den Ausgleichungen zwischen BIOS-Versionen geschafft haben.
                 <br>
-                <a>- Wechsel zu OpenHfsPlus</a>
+                <br>
+                Das größte Problem beim Notebook hat uns letzten Endes doch nicht aufgehalten. :)
+                <br>
+                <br>
+                Es steht noch mehr an:
+                <br>
+                <br>
+                - Update auf OC 0.6.7
+                <br>
+                - SD-Kartenleser funktionstüchtig machten
+                <br>
+                - Update auf Big Sur
                 <br>
                 <br>
             Das war die Geschichte hinter dem 8570W-Hackintosh-Projekt. Folgt der <a href="https://github.com/SkyrilHD/HP-8570W-Hackintosh" style="color: darkgrey">Repository von @SkyrilHD</a> für weitere Updates zu der EFI-Konfiguration.
             </p>
-            <b><i>Dieser Artikel wurde am 28.01.2021 verfasst. Zuletzt bearbeitet am 11.02.2021</i></b>
+            <b><i>Dieser Artikel wurde am 28.01.2021 verfasst. Zuletzt bearbeitet am 06.03.2021.</i></b>
     </body>
 </html>
